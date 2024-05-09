@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 
-// import { GoogleAuthProvider } from "firebase/auth";
+
 import { auth } from "../../firebase/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 
@@ -33,11 +33,7 @@ export function AuthProvider({ children }) {
       );
       setIsEmailUser(isEmail);
 
-      // check if the auth provider is google or not
-    //   const isGoogle = user.providerData.some(
-    //     (provider) => provider.providerId === GoogleAuthProvider.PROVIDER_ID
-    //   );
-    //   setIsGoogleUser(isGoogle);
+    
 
       setUserLoggedIn(true);
     } else {
