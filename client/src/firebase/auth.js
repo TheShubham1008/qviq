@@ -6,8 +6,8 @@ import {
   GoogleAuthProvider,
 } from "firebase/auth";
 
-export const doCreateUserWithEmailAndPassword = async (email, password) => {
-  return createUserWithEmailAndPassword(auth, email, password);
+export const doCreateUserWithEmailAndPassword = async (email, password,phone,photo) => {
+  return createUserWithEmailAndPassword(auth, email, password,phone,photo);
 };
 
 export const doSignInWithEmailAndPassword = (email, password) => {
