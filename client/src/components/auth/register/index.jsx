@@ -27,13 +27,7 @@ const Register = () => {
   const { userLoggedIn } = useAuth();
 
   const navigate = useNavigate();
-  const [user, setUser] = useState({
-    user: "",
-    email: "",
-    phone: "",
-    password: "",
-    photo:[0],
-  });
+  const [user, setUser] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -106,11 +100,14 @@ const Register = () => {
     );
   };
 
+
+
+
   const onSubmit = async (e) => {
     e.preventDefault();
     if (!isRegistering) {
       setIsRegistering(true);
-      await doCreateUserWithEmailAndPassword(email, password,user,phone);
+      await doCreateUserWithEmailAndPassword(user,email, password,phone);
     }
   };
 
@@ -133,6 +130,9 @@ const Register = () => {
     }
   };
 
+
+
+  
   return (
     <>
       {userLoggedIn && <Navigate to={"/home"} replace={true} />}
