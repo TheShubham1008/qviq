@@ -51,7 +51,7 @@ const Login = () => {
       setIsSigningIn(true);
       doSignInWithGoogle().catch((err) => {
         setIsSigningIn(false);
-        // Add code to display an error message
+        
         setErrorMessage("Failed to sign in. Please try again.");
       });
     }
