@@ -102,14 +102,13 @@ const Register = () => {
 
 
 
-
-  const onSubmit = async (e) => {
-    e.preventDefault();
-    if (!isRegistering) {
-      setIsRegistering(true);
-      await doCreateUserWithEmailAndPassword(user,email, password,phone);
+ const onSubmit = async (e) => {
+    e.preventDefault()
+    if(!isRegistering) {
+        setIsRegistering(true)
+        await doCreateUserWithEmailAndPassword(email, password)
     }
-  };
+};
 
 
 
